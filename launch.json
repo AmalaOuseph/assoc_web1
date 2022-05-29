@@ -1,0 +1,29 @@
+int main ( )
+ {
+ int prevno, curno, curlength, maxlength;
+ 
+ scanf ("%d", &prevno); 
+ scanf ("%d", &curno);
+ 
+ curlength = maxlength = 1;
+ 
+ while ( curno != -1 ) { 
+ if ( curno>=prevno ) 
+ {
+ curlength++; 
+ } else {
+  if ( curlength>maxlength) 
+ { 
+ maxlength = curlength; 
+ } 
+ curlength = 1 ; 
+ }
+ prevno = curno ;
+ scanf("%d", &curno ); 
+ }
+ 
+ if ( curlength > maxlength ) maxlength = curlength;
+ 
+ printf ("Maximum length is %d\n", maxlength) ; 
+ return 0;
+ }
